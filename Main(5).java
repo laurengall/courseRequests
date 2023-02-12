@@ -65,7 +65,20 @@ class Main {
     System.out.println("Your course requests are: ");
     iterateList(courses);
     System.out.println("Would you like to make any changes to your requests?");
-    // TO BE IMPLEMENTED NEXT VERSION
+    System.out.println("Type 1 for yes and 2 for no.");
+    int change = input.nextInt();
+    if (change == 1) {
+      System.out.println("Type the number of the course you would like to change: ");
+      iterateList(courses);
+      int replace = input.nextInt();
+      int replaceInt = replace - 1;
+      courses.remove(replaceInt);
+      iterateList(courses);
+    } else if (change == 2) {
+      System.out.println("Thank you for your requests. Have a good day!");
+    } else {
+
+    }
   }
 
   // Iterates through course options
